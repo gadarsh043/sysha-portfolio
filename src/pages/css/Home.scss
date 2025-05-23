@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+.background-container {
+  height: 73vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: radial-gradient(circle at center, #444444, #9d9d9d);
+  font-family: 'Muli', sans-serif;
+  color: #e7ebee;
+  justify-content: center;
+}
+
+.top-nav {
+  height: 12vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 44px;
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(to bottom, rgba(231, 235, 238, 0.5), transparent);
+  background: radial-gradient(circle at center, #444444, #9d9d9d);
+}
+
+.nav-links-left,
+.nav-links-right {
+  display: flex;
+  gap: 20px;
+}
+
+.top-nav a {
+  text-decoration: none;
+  color: #e7ebee;
+  font-size: 24px;
+  font-weight: normal;
+  padding: 5px 0;
+}
+
+.nav-work:hover,
+.nav-about:hover,
+.nav-play:hover,
+.nav-contact:hover {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #b92528;
+  cursor: url("data:image/svg+xml;utf8,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='6' fill='%23b92528' stroke='white' stroke-width='1.5'/%3E%3C/svg%3E"), auto;
+}
+
+.nav-about:hover,
+.nav-play:hover,
+.nav-contact:hover {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #b92528;
+}
+
+.logo-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0 20px;
+}
+
+.logo-container a {
+  display: block;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.logo-container a:hover {
+  transform: scale(1.05);
+}
+
+.logo-container img {
+  width: 250px;
+  height: auto;
+}
+
+.main-content {
+  display: none;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  z-index: 0;
+  background-color: #444444;
+  padding: 20px;
+  color: #e7ebee;
+}
+
+.top-nav:hover .nav-work + .main-content{
+  display: flex;
+  position: absolute;
+  top: 12vh;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  height: auto;
+  flex-grow: 0;
+  padding: 10px 30px 15px 32px;
+  background-color: #3a3a3a;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  justify-content: center;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.content-section {
+  flex: 0 0 auto;
+  padding: 0 15px;
+}
+
+.content-section h2 {
+  font-size: 26px;
+  font-weight: bold;
+  color: #e7ebee;
+  margin-bottom: 15px;
+}
+
+.content-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.content-section li {
+  font-size: 16px;
+  color: #e7ebee;
+  margin-bottom: 8px;
+}
+
+.card-stack-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 450px;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stacked-card {
+  position: absolute;
+  width: 285px;
+  height: auto;
+  transition: transform 0.5s ease-in-out, z-index 0s;
+  cursor: pointer;
+  display: block;
+}
+
+.stacked-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+#card-about img {
+  width: 100%;
+  object-fit: cover;
+}
+
+#card-work img {
+  width: 130%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+#card-about {
+  transform: rotate(2deg) translate(0px, 0px);
+  z-index: 4;
+}
+
+#card-work {
+  transform: rotate(-14deg) translate(-90px, 35px);
+  z-index: 3;
+}
+
+#card-play {
+  transform: rotate(12deg) translate(70px, 90px);
+  z-index: 2;
+}
+
+#card-contact {
+  transform: rotate(23deg) translate(80px, -70px);
+  z-index: 1;
+}
+
+.card-stack-container:hover {
+  #card-work {
+    transform: translateX(-250px) translateY(-40px) rotate(-25deg);
+    z-index: 5;
+  }
+
+  #card-about {
+    transform: translateX(-80px) translateY(60px) rotate(15deg);
+    z-index: 8;
+  }
+
+  #card-contact {
+    transform: translateX(80px) translateY(-60px) rotate(-15deg);
+    z-index: 7;
+  }
+
+  #card-play {
+    transform: translateX(250px) translateY(40px) rotate(25deg);
+    z-index: 6;
+  }
+}
+
+.footer {
+  padding: 20px 0px;
+  text-align: center;
+  color: #e7ebee;
+  width: 100%;
+  z-index: 100;
+  background: radial-gradient(circle at center, #444444, #9d9d9d);
+}

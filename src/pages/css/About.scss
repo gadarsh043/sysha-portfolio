@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,700&display=swap');
+
+.nav-links-left,
+.nav-links-right {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-work:hover,
+.nav-about:hover,
+.nav-play:hover,
+.nav-contact:hover {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #b92528;
+}
+
+.logo-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0 20px;
+}
+
+.logo-container a {
+  display: block;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.logo-container a:hover {
+  transform: scale(1.05);
+}
+
+.logo-container img {
+  width: 250px;
+  height: auto;
+}
+
+.page-content {
+  color: #e7ebee;
+}
+
+.about-container {
+  display: flex;
+  max-width: 1200px;
+  padding: 20px 44px;
+  gap: 80px;
+  position: relative;
+}
+
+.about-image {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: -44px;
+}
+
+.about-image img {
+  width: 150%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.about-content {
+  flex: 0 0 65%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-right: 100px;
+}
+
+.skills-container {
+  position: relative;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.skills-list {
+  position: relative;
+  width: 100%;
+}
+
+.skill {
+  position: absolute;
+  font-size: 36px;
+  font-weight: bold;
+  opacity: 0;
+  left: 0;
+  width: 100%;
+  text-align: left;
+  font-family: 'Bauer Bodoni', 'Bodoni Moda', serif;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transform: translateY(20px);
+}
+
+.skill.active {
+  opacity: 1;
+  transform: translateY(0);
+  color: rgba(231, 235, 238, 0.8);
+}
+
+.skill:not(.active) {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.about-bio {
+  width: 120%;
+  margin-top: 10px;
+}
+
+.about-bio p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}

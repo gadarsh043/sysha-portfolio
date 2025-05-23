@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+.nav-links-left,
+.nav-links-right {
+  display: flex;
+  gap: 20px;
+}
+
+.logo-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0 20px;
+}
+
+.logo-container a {
+  display: block;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.logo-container a:hover {
+  transform: scale(1.05);
+}
+
+.logo-container img {
+  width: 250px;
+  height: auto;
+}
