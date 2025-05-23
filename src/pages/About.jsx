@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import './css/About.scss';
 import AboutCard from '@/assets/about-card.png'
+import ResumePDF from '@/assets/Resume.pdf';
 import NavBar from '@/components/Navbar.jsx';
 import Footer from '@/components/Footer.jsx';
 
@@ -85,6 +86,11 @@ function About() {
               <p>
                 Beyond my professional pursuits, I’m a curious explorer at heart. I have an ever-growing love for design—whether it’s problem resolution, creative brainstorming, or the way spaces shape human emotions. When I’m not obsessing over aesthetics, you’ll find me surrounded by my favorite things: dogs, snakes, and plants. Travel fuels my creativity, offering new perspectives and design inspiration at every turn. Whether it’s a bustling city or a quiet forest, I love immersing myself in different environments, always looking for stories hidden in the details.
               </p>
+              <div className="resume">
+                <a href={ResumePDF} target="_blank" rel="noopener noreferrer">
+                  <p>View my Resume</p>
+                </a>
+              </div>
             </div>
           </div>
         </div>

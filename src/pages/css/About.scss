@@ -6,8 +6,8 @@
 
 .about-container {
   display: flex;
-  max-width: 1200px;
-  padding: 20px 44px;
+  max-width: 1220px;
+  padding: 20px;
   gap: 80px;
   position: relative;
 }
@@ -16,7 +16,6 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  margin-left: -44px;
 }
 
 .about-image img {
@@ -78,4 +77,15 @@
   font-size: 16px;
   line-height: 1.6;
   margin-bottom: 20px;
+}
+
+.resume {
+  display: flex;
+  justify-content: right;
+  a {
+    color: white;
+    font-weight: bold;
+    font-family: Muli;
+    cursor: url("data:image/svg+xml;utf8,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='6' fill='%23b92528' stroke='white' stroke-width='1.5'/%3E%3C/svg%3E"), auto;
+  }
 }
