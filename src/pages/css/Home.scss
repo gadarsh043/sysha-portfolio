@@ -1,4 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,700&display=swap');
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 
 .background-container {
   height: 73vh;
@@ -47,13 +54,6 @@
   cursor: url("data:image/svg+xml;utf8,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='6' fill='%23b92528' stroke='white' stroke-width='1.5'/%3E%3C/svg%3E"), auto;
 }
 
-.nav-about:hover,
-.nav-play:hover,
-.nav-contact:hover {
-  font-weight: bold;
-  text-decoration: underline;
-  color: #b92528;
-}
 
 .logo-container {
   position: absolute;
@@ -88,7 +88,7 @@
   color: #e7ebee;
 }
 
-.top-nav:hover .nav-work + .main-content{
+.top-nav:hover .nav-work + .main-content {
   display: flex;
   position: absolute;
   top: 12vh;

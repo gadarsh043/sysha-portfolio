@@ -1,42 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,700&display=swap');
-
-.nav-links-left,
-.nav-links-right {
-  display: flex;
-  gap: 20px;
-}
-
-.nav-work:hover,
-.nav-about:hover,
-.nav-play:hover,
-.nav-contact:hover {
-  font-weight: bold;
-  text-decoration: underline;
-  color: #b92528;
-}
-
-.logo-container {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 0 20px;
-}
-
-.logo-container a {
-  display: block;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-.logo-container a:hover {
-  transform: scale(1.05);
-}
-
-.logo-container img {
-  width: 250px;
-  height: auto;
-}
 
 .page-content {
   color: #e7ebee;
