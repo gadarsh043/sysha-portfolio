@@ -50,7 +50,6 @@ html, body {
 .nav-contact:hover {
   font-weight: bold;
   text-decoration: underline;
-  color: #b92528;
   cursor: url("data:image/svg+xml;utf8,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='6' fill='%23b92528' stroke='white' stroke-width='1.5'/%3E%3C/svg%3E"), auto;
 }
 
@@ -218,4 +217,5 @@ html, body {
   width: 100%;
   z-index: 100;
   background: radial-gradient(circle at center, #444444, #9d9d9d);
+  // Change the background
 }
