@@ -8,7 +8,6 @@ html, body {
 }
 
 .background-container {
-  height: 73vh;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -24,14 +23,12 @@ html, body {
   justify-content: space-between;
   align-items: center;
   padding: 0 44px;
-  position: relative;
   background: linear-gradient(to bottom, rgba(231, 235, 238, 0.5), transparent);
-  background: radial-gradient(circle at center, #444444, #9d9d9d);
+  font-family: 'Muli', sans-serif;
 }
 
 .nav-links-left,
 .nav-links-right {
-  position: relative;
   display: flex;
   gap: 20px;
 }
@@ -130,6 +127,7 @@ html, body {
 }
 
 .card-stack-container {
+  height: 85vh;
   position: relative;
   display: flex;
   justify-content: center;
@@ -145,7 +143,6 @@ html, body {
   width: 285px;
   height: auto;
   transition: transform 0.5s ease-in-out, z-index 0s;
-  cursor: pointer;
   display: block;
 }
 
@@ -154,6 +151,7 @@ html, body {
   height: auto;
   display: block;
   border-radius: 8px;
+  cursor: url("data:image/svg+xml;utf8,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='6' fill='%23b92528' stroke='white' stroke-width='1.5'/%3E%3C/svg%3E"), auto;
 }
 
 #card-about img {
@@ -211,11 +209,10 @@ html, body {
 }
 
 .footer {
-  padding: 20px 0px;
   text-align: center;
   color: #e7ebee;
   width: 100%;
   z-index: 100;
-  background: radial-gradient(circle at center, #444444, #9d9d9d);
-  // Change the background
+  position: absolute;
+  bottom: 0;
 }

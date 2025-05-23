@@ -1,9 +1,12 @@
 import './css/Contact.scss';
 import organicShape from '@/assets/organic-shape.png';
+import NavBar from '@/components/Navbar.jsx';
+import Footer from '@/components/Footer.jsx';
 
 function Contact() {
   return (
     <div className="background-container contact-page-active">
+      <NavBar />
       <main className="contact-page">
         <div className="contact-info-section">
           <h1>Get In Touch!</h1>
@@ -65,6 +68,7 @@ function Contact() {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 }

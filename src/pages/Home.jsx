@@ -4,10 +4,13 @@ import AboutCard from '@/assets/about-card.png'
 import WorkCard from '@/assets/work-card.png'
 import PlayCard from '@/assets/play-card.png'
 import ContactCard from '@/assets/contact-card.png'
+import NavBar from '@/components/Navbar.jsx';
+import Footer from '@/components/Footer.jsx';
 
 function Home() {
   return (
     <div className="background-container">
+      <NavBar />
       <main className="main-content">
         <div className="content-section">
           <h2>UI/UX</h2>
@@ -49,6 +52,7 @@ function Home() {
           <img src={ContactCard} alt="Contact" />
         </Link>
       </div>
+      <Footer />
     </div>
   );
 }

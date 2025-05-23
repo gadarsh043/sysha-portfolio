@@ -6,13 +6,30 @@ import './css/Navbar.scss'
 function NavBar() {
   const location = useLocation();
   const [isWorkMenuOpen, setIsWorkMenuOpen] = useState(false);
+  const [closeTimeout, setCloseTimeout] = useState(null);
+
+  const handleMouseEnter = () => {
+    if (closeTimeout) {
+      clearTimeout(closeTimeout);
+      setCloseTimeout(null);
+    }
+    setIsWorkMenuOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    const timeout = setTimeout(() => {
+      setIsWorkMenuOpen(false);
+      setCloseTimeout(null);
+    }, 100);
+    setCloseTimeout(timeout);
+  };
 
   return (
     <header className="top-nav">
       <nav className="nav-links-left">
         <Link to="/about" className={`nav-about ${location.pathname === '/about' ? 'active' : ''}`}>About</Link>
-        <Link to="/work" className={`nav-work ${location.pathname === '/work' ? 'active' : ''}`} onMouseEnter={() => setIsWorkMenuOpen(true)} onMouseLeave={() => setIsWorkMenuOpen(false)}>Work</Link>
-        <div className='work-drop-container' onMouseEnter={() => setIsWorkMenuOpen(true)} onMouseLeave={() => setIsWorkMenuOpen(false)}>
+        <Link to="/work" className={`nav-work ${location.pathname === '/work' ? 'active' : ''}`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>Work</Link>
+        <div className='work-drop-container'  onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
           {isWorkMenuOpen && (
             <div className="work-categories">
               <div className="category">

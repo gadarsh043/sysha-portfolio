@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import './css/About.scss';
 import AboutCard from '@/assets/about-card.png'
+import NavBar from '@/components/Navbar.jsx';
+import Footer from '@/components/Footer.jsx';
 
 function About() {
   const skills = [
@@ -52,10 +54,11 @@ function About() {
   useEffect(() => {
     showRandomSkill();
     return () => clearTimeout();
-  });
+  }, []);
 
   return (
     <div className="background-container">
+      <NavBar />
       <main className="page-content">
         <div className="about-container">
           <div className="about-image">
@@ -86,6 +89,7 @@ function About() {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 }
