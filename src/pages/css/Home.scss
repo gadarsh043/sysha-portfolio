@@ -19,19 +19,19 @@ html, body {
 }
 
 .top-nav {
-  height: 12vh;
+  height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 44px;
   position: relative;
-  z-index: 1;
   background: linear-gradient(to bottom, rgba(231, 235, 238, 0.5), transparent);
   background: radial-gradient(circle at center, #444444, #9d9d9d);
 }
 
 .nav-links-left,
 .nav-links-right {
+  position: relative;
   display: flex;
   gap: 20px;
 }

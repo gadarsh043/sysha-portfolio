@@ -1,0 +1,13 @@
+.work-drop-container {
+    position: absolute;
+    display: flex;
+    background: linear-gradient(to right, #9d9d9d, #444444, #444444);
+    top: 30px;
+    justify-content: space-around;
+    border-radius: 45px;
+    width: 900px;
+    z-index: 6;
+}
+.pointer {
+    cursor: pointer;
+}
