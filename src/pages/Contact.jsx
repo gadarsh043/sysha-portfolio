@@ -1,4 +1,5 @@
 import './css/Contact.scss';
+import organicShape from '@/assets/organic-shape.png';
 
 function Contact() {
   return (
@@ -33,7 +34,15 @@ function Contact() {
           </div>
         </div>
         <div className="contact-form-section">
-          <div className="form-container">
+          <div
+            className="form-container"
+            style={{
+              backgroundImage: `url(${organicShape})`,
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'center',
+              backgroundSize: '140%'
+            }}
+          >
             <form>
               <div className="form-group">
                 <label htmlFor="name">Name</label>
