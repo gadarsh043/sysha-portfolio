@@ -29,32 +29,28 @@ function NavBar() {
       <nav className="nav-links-left">
         <Link to="/about" className={`nav-about ${location.pathname === '/about' ? 'active' : ''}`}>About</Link>
         <Link to="/work" className={`nav-work ${location.pathname === '/work' ? 'active' : ''}`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>Work</Link>
-        <div className='work-drop-container'  onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+        <div className='work-drop-container'  onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseEnter}>
           {isWorkMenuOpen && (
             <div className="work-categories">
               <div className="category">
                 <h2>UI/UX</h2>
                 <ul>
+                  <li className='pointer'>Lucent</li>
                   <li className='pointer'>CUT.DWN</li>
-                  <li className='pointer'>Class Project</li>
-                  <li className='pointer'>This website</li>
+                  <li className='pointer'>TGE</li>
+                  <li className='pointer'>User Research</li>
                 </ul>
               </div>
-              <div className="category">
-                <h2>Architecture</h2>
+              <div className="category width-change">
+                <h2>Architecture + Interior Design</h2>
                 <ul>
-                  <li className='pointer'>Vayu</li>
-                  <li className='pointer'>Xyz</li>
-                  <li className='pointer'>Abcdef Open</li>
-                </ul>
-              </div>
-              <div className="category">
-                <h2>Interiors</h2>
-                <ul>
-                  <li className='pointer'>Adhyamu</li>
+                  <li className='pointer'>Poliform Experience Centre</li>
                   <li className='pointer'>The Regency</li>
-                  <li className='pointer'>Ali’s Office</li>
-                  <li className='pointer'>Poliform Flagship Showroom</li>
+                  <li className='pointer'>Ventura Experience Centre</li>
+                  <li className='pointer'>Sona Residence</li>
+                  <li className='pointer'>DryBy Nail Salon</li>
+                  <li className='pointer'>The Vayu</li>
+                  <li className='pointer'>Aabha Residence</li>
                 </ul>
               </div>
             </div>

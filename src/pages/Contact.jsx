@@ -116,7 +116,7 @@ function Contact() {
           <div className="contact-details">
             <p>
               <i className="fas fa-map-marker-alt"></i>
-              7421 Frankford Road, Richardson, Texas - 75252
+              Dallas, Texas
             </p>
             <p>
               <i className="fas fa-envelope"></i>

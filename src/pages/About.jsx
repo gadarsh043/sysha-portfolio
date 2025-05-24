@@ -88,7 +88,7 @@ function About() {
               </p>
               <div className="resume">
                 <a href={ResumePDF} target="_blank" rel="noopener noreferrer">
-                  <p>View my Resume</p>
+                  <p>View Resume</p>
                 </a>
               </div>
             </div>

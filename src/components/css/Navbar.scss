@@ -2,11 +2,11 @@
     position: absolute;
     display: flex;
     z-index: 6;
-    width: 100%;
     top: 80px;
     left: 0;
     background: #444444;
     padding: 0 50px;
+    width: 92.5%;
 }
 .pointer {
   cursor: url("data:image/svg+xml;utf8,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='6' fill='%23b92528' stroke='white' stroke-width='1.5'/%3E%3C/svg%3E"), auto;
