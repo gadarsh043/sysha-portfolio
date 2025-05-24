@@ -1,0 +1,81 @@
+.architerrax-content {
+    height: 85vh;
+    padding: 0px 45px;
+    gap: 10px;
+    overflow: scroll;
+    .grid, .grid2 {
+        width: 100%;
+        display: flex;
+        gap: 50px;
+        height: 100%;
+        .left-side, .right-side {
+            gap: 10px;
+            display: flex;
+            justify-content: space-evenly;
+            img {
+                width: 50%;
+                height: 90%;
+            }
+        }
+        .left-side {
+            width: 60%;
+        }
+        .right-side {
+            width: 40%;
+            display: block;
+            .title {
+                padding-bottom: 10px;
+                font-family: 'Muli';
+                font-size: 25px;
+                color: black;
+                opacity: 0.8;
+            }
+        }
+    }
+}
+.collapsible-section {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.collapsible-title {
+  padding: 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #25545a;
+  font-size: 14px;
+  font-family: 'Muli';
+}
+
+.collapsible-title:hover {
+    cursor: url("data:image/svg+xml;utf8,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='6' fill='%23b92528' stroke='white' stroke-width='1.5'/%3E%3C/svg%3E"), auto;
+}
+
+.collapsible-content {
+  padding: 15px;
+  display: block;
+  border: 1px solid #25545a;
+  background-color: #e4e3e0;
+  color: black;
+  font-size: 13px;
+  font-family: 'Muli';
+}
+
+.collapsible-content {
+  display: none;
+}
+
+.collapsible-section .collapsible-content {
+  display: block;
+}
+.grid2 {
+    justify-content: center;
+    img {
+        width: 20%;
+        height: 80%;
+        display: flex;
+    }
+}
