@@ -127,6 +127,13 @@
           height: 200px;
           object-fit: cover;
           border-radius: 8px;
+          filter: grayscale(100%);
+          transition: filter 0.3s ease;
+          
+          &:hover {
+            filter: grayscale(0%);
+            cursor: url("data:image/svg+xml;utf8,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='6' fill='%23b92528' stroke='white' stroke-width='1.5'/%3E%3C/svg%3E"), auto;
+          }
         }
       }
     }
