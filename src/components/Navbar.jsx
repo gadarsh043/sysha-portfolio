@@ -29,7 +29,7 @@ function NavBar() {
       <nav className="nav-links-left">
         <Link to="/about" className={`nav-about ${location.pathname === '/about' ? 'active' : ''}`}>About</Link>
         <Link to="/work" className={`nav-work ${location.pathname === '/work' ? 'active' : ''}`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>Work</Link>
-        <div className='work-drop-container'  onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseEnter}>
+        <div className='work-drop-container'  onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
           {isWorkMenuOpen && (
             <div className="work-categories">
               <div className="category">
