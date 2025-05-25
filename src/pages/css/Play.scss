@@ -3,7 +3,7 @@
 }
 .play-content {
     display: flex;
-    padding: 0px 45px;
+    padding: 0px 135px;
     gap: 10px;
     .grid {
         width: 50%;
@@ -13,30 +13,31 @@
         overflow: auto;
         gap: 2%;
         position: relative;
+        overflow: hidden;
         .img1, .img5 {
-            width: 66%;
-            height: 32%;
+            height: 170px;
+            width: 350px;
             object-fit: cover;
             filter: grayscale(100%);
             transition: filter 0.3s ease;
         }
         .vid1, .vid2, .img2, .img3, .img4, .img7, .vid3, .img8, .img9, .vid4 {
-            width: 32%;
-            height: 32%;
+            width: 170px;
+            height: 170px;
             object-fit: cover;
             filter: grayscale(100%);
             transition: filter 0.3s ease;
         }
         .img6, .img10 {
-            height: 66%;
-            width: 32%;
+            height: 360px;
+            width: 170px;
             object-fit: cover;
             filter: grayscale(100%);
             transition: filter 0.3s ease;
         }
         .img10 {
             position: absolute;
-            bottom: 0;
+            bottom: 5px;
             right: 0;
         }
         .vid4 {
