@@ -1,53 +1,73 @@
 .architerrax-content {
     height: 85vh;
-    padding: 0px 45px;
-    gap: 10px;
-    overflow: scroll;
+    padding: 0 4%;
+    gap: 2%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100%;
+    
     .grid, .grid2 {
         width: 100%;
         display: flex;
-        gap: 50px;
-        height: 100%;
+        gap: 4%;
+        height: auto;
+        margin-bottom: 4%;
+        
         .left-side, .right-side {
-            gap: 10px;
+            gap: 2%;
             display: flex;
             justify-content: space-evenly;
             img {
-                width: 50%;
-                height: 90%;
+                width: 48%;
+                height: auto;
+                object-fit: cover;
             }
         }
+        
         .left-side {
             width: 60%;
         }
+        
         .right-side {
             width: 40%;
             display: block;
             .title {
-                padding-bottom: 10px;
-                font-family: 'Muli';
-                font-size: 25px;
+                padding-bottom: 2%;
+                font-family: var(--font-primary);
+                font-size: clamp(20px, 2vw, 25px);
                 color: black;
                 opacity: 0.8;
             }
         }
     }
+
+    .grid2 {
+        justify-content: center;
+        flex-wrap: wrap;
+        img {
+            width: 22%;
+            height: auto;
+            margin: 1%;
+            object-fit: cover;
+        }
+    }
 }
+
 .collapsible-section {
-  width: 100%;
-  border-radius: 5px;
-  margin-bottom: 10px;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 2%;
 }
 
 .collapsible-title {
-  padding: 15px;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #25545a;
-  font-size: 14px;
-  font-family: 'Muli';
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #25545a;
+    font-size: clamp(12px, 1.2vw, 14px);
+    font-family: var(--font-primary);
 }
 
 .collapsible-title:hover {
@@ -55,27 +75,63 @@
 }
 
 .collapsible-content {
-  padding: 15px;
-  display: block;
-  border: 1px solid #25545a;
-  background-color: #e4e3e0;
-  color: black;
-  font-size: 13px;
-  font-family: 'Muli';
+    padding: 15px;
+    border: 1px solid #25545a;
+    background-color: #e4e3e0;
+    color: black;
+    font-size: clamp(11px, 1.1vw, 13px);
+    font-family: var(--font-primary);
 }
 
 .collapsible-content {
-  display: none;
+    display: none;
 }
 
 .collapsible-section .collapsible-content {
-  display: block;
+    display: block;
 }
-.grid2 {
-    justify-content: center;
-    img {
-        width: 20%;
-        height: 80%;
-        display: flex;
+
+@media (max-width: 768px) {
+    .architerrax-content {
+        padding: 0 3%;
+        
+        .grid {
+            flex-direction: column;
+            
+            .left-side, .right-side {
+                width: 100%;
+                margin-bottom: 4%;
+            }
+        }
+        
+        .grid2 {
+            img {
+                width: 48%;
+                margin: 1%;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .architerrax-content {
+        padding: 0 2%;
+        
+        .grid {
+            .left-side {
+                flex-direction: column;
+                img {
+                    width: 100%;
+                    margin-bottom: 2%;
+                }
+            }
+        }
+        
+        .grid2 {
+            img {
+                width: 100%;
+                margin: 2% 0;
+            }
+        }
     }
 }
