@@ -8,6 +8,7 @@ import Architerrax from '../components/Architerrax';
 import Scutoid from '../components/Scutoid';
 import Octaphilosophy from '../components/Octaphilosophy';
 import Adyamu from '../components/Adyamu';
+import UserResearch from '../components/UserResearch';
 
 function AppRoutes() {
   return (
@@ -21,6 +22,7 @@ function AppRoutes() {
       <Route path="/play/scutoid" element={<Scutoid />} />
       <Route path="/play/octaphilosophy" element={<Octaphilosophy />} />
       <Route path="/play/adyamu" element={<Adyamu />} />
+      <Route path="/work/user-research" element={<UserResearch />} />
     </Routes>
   );
 }

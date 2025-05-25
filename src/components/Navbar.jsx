@@ -10,6 +10,9 @@ function NavBar() {
 
   // Check if current route is a play sub-route (not the main /play route)
   const isPlaySubRoute = location.pathname.startsWith('/play/') && location.pathname !== '/play';
+  
+  // Check if current route is a work sub-route (not the main /work route)
+  const isWorkSubRoute = location.pathname.startsWith('/work/') && location.pathname !== '/work';
 
   const handleMouseEnter = () => {
     if (closeTimeout) {
@@ -28,10 +31,10 @@ function NavBar() {
   };
 
   return (
-    <header className={`top-nav ${isPlaySubRoute ? 'play-route-nav' : ''}`}>
+    <header className={`top-nav ${isPlaySubRoute ? 'play-route-nav' : ''} ${isWorkSubRoute ? 'work-route-nav' : ''}`}>
       <nav className="nav-links-left">
         <Link to="/about" className={`nav-about ${location.pathname === '/about' ? 'active' : ''}`}>About</Link>
-        <Link to="/work" className={`nav-work ${location.pathname === '/work' ? 'active' : ''}`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>Work</Link>
+        <Link to="/work" className={`nav-work ${location.pathname === '/work' || location.pathname.startsWith('/work/') ? 'active' : ''}`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>Work</Link>
         <div className='work-drop-container'  onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
           {isWorkMenuOpen && (
             <div className="work-categories">
@@ -41,7 +44,7 @@ function NavBar() {
                   <li className='pointer'>Lucent</li>
                   <li className='pointer'>CUT.DWN</li>
                   <li className='pointer'>TGE</li>
-                  <li className='pointer'>User Research</li>
+                  <li><Link to="/work/user-research" className='pointer'>User Research</Link></li>
                 </ul>
               </div>
               <div className="category width-change">

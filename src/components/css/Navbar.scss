@@ -48,6 +48,11 @@
     font-size: clamp(12px, 1.2vw, 14px);
     color: #e7ebee;
     font-family: var(--font-primary);
+    a {
+        color: inherit;
+        text-decoration: none;
+        font-size: clamp(12px, 1.2vw, 14px);
+    }
 }
 
 .pointer {
@@ -55,7 +60,7 @@
 }
 
 /* Play route specific navbar styling */
-.play-route-nav {
+.play-route-nav, .work-route-nav {
     background: linear-gradient(180deg, #e7ebee, #88888c) !important;
     
     a {
