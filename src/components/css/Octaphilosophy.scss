@@ -1,0 +1,195 @@
+/* Play route specific background */
+.play-route-background {
+    background: #e4e3e0 !important;
+    color: #333333;
+}
+
+.octaphilosophy-content {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    gap: 4%;
+    
+    .main-grid {
+        display: flex;
+        gap: 0;
+        align-items: flex-start;
+        
+        .main-image {
+            flex: 0.3;
+            display: flex;
+            justify-content: center;
+            
+            img {
+                width: 100%;
+                height: 80vh;
+                object-fit: cover;
+            }
+        }
+        
+        .info-panel {
+            flex: 0.7;
+            max-width: none;
+            padding: 4% 2%;
+            position: relative;
+            
+            .project-title {
+                font-size: 28px;
+                font-weight: bold;
+                color: #333333;
+                margin-bottom: 3%;
+                font-family: var(--font-primary);
+                line-height: 1.2;
+            }
+            
+            .info-card {
+                background: #25545a;
+                border-radius: 8px;
+                overflow: hidden;
+                width: 100%;
+                
+                .info-header {
+                    padding: 24px;
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    transition: background-color 0.3s ease;
+                    
+                    &:hover {
+                        background-color: rgba(255, 255, 255, 0.05);
+                        cursor: url("data:image/svg+xml;utf8,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='6' fill='%23b92528' stroke='white' stroke-width='1.5'/%3E%3C/svg%3E"), auto;
+                    }
+                    
+                    .info-details {
+                        flex: 1;
+                        
+                        .role {
+                            font-size: clamp(16px, 1.5vw, 20px);
+                            font-weight: 600;
+                            color: #ffffff;
+                            margin-bottom: 12px;
+                            font-family: var(--font-primary);
+                        }
+                        
+                        .year {
+                            font-size: clamp(14px, 1.2vw, 16px);
+                            color: #e0e0e0;
+                            margin-bottom: 8px;
+                            font-family: var(--font-primary);
+                        }
+                        
+                        .scope {
+                            font-size: clamp(14px, 1.2vw, 16px);
+                            color: #e0e0e0;
+                            font-family: var(--font-primary);
+                            line-height: 1.4;
+                        }
+                    }
+                    
+                    .toggle-arrow {
+                        font-size: 24px;
+                        color: #ffffff;
+                        margin-left: 16px;
+                        transition: transform 0.3s ease;
+                        font-weight: bold;
+                        line-height: 1;
+                        user-select: none;
+                        min-width: 24px;
+                        text-align: center;
+                    }
+                }
+                
+                .info-content {
+                    padding: 0 24px 24px 24px;
+                    background-color: #e4e3e0;
+                    color: #333333;
+                    font-size: 14px;
+                    line-height: 1.6;
+                    font-family: var(--font-primary);
+                    border-top: 1px solid rgba(255, 255, 255, 0.1);
+                    border: 1px solid #25545a;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .octaphilosophy-content {
+        padding: 3% 4%;
+        
+        .main-grid {
+            flex-direction: column;
+            gap: 4%;
+            
+            .main-image {
+                justify-content: center;
+                margin-bottom: 2%;
+                
+                img {
+                    max-width: 400px;
+                    height: auto;
+                }
+            }
+            
+            .info-panel {
+                max-width: 100%;
+                flex: 1;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .octaphilosophy-content {
+        padding: 2% 3%;
+        
+        .main-grid {
+            .main-image {
+                img {
+                    max-width: 300px;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .octaphilosophy-content {
+        padding: 2%;
+        
+        .main-grid {
+            gap: 3%;
+            
+            .main-image {
+                img {
+                    max-width: 250px;
+                    height: auto;
+                }
+            }
+        }
+        
+        .info-panel {
+            .project-title {
+                font-size: 24px;
+            }
+            
+            .info-card {
+                .info-header {
+                    padding: 16px;
+                    
+                    .toggle-arrow {
+                        font-size: 20px;
+                        min-width: 20px;
+                    }
+                }
+                
+                .info-content {
+                    padding: 0 16px 16px 16px;
+                }
+            }
+        }
+    }
+} 

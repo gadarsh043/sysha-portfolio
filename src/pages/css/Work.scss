@@ -28,6 +28,203 @@
   font-size: 14px;
 }
 
+.work-background {
+  min-height: 100vh;
+}
+
 .work-content {
-  height: 85vh;
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4% 6%;
+  
+  .tabs-container {
+    display: flex;
+    gap: 4%;
+    margin-bottom: 4%;
+    
+    .tab {
+      background: none;
+      border: none;
+      color: #ffffff;
+      font-size: 20px;
+      font-family: var(--font-primary);
+      cursor: pointer;
+      padding: 12px 24px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      
+      &:hover {
+        cursor: url("data:image/svg+xml;utf8,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='6' fill='%23b92528' stroke='white' stroke-width='1.5'/%3E%3C/svg%3E"), auto;
+      }
+      
+      &.active {
+        text-decoration: underline;
+        text-decoration-color: #ffffff;
+        text-underline-offset: 8px;
+        text-decoration-thickness: 2px;
+      }
+    }
+  }
+  
+  .carousel-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    gap: 20px;
+    
+    .carousel-nav {
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+      color: #ffffff;
+      font-size: 24px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      flex-shrink: 0;
+      
+      &:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: scale(1.1);
+        cursor: url("data:image/svg+xml;utf8,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='6' fill='%23b92528' stroke='white' stroke-width='1.5'/%3E%3C/svg%3E"), auto;
+      }
+      
+      &.prev {
+        order: 1;
+      }
+      
+      &.next {
+        order: 3;
+      }
+    }
+  }
+  
+  .carousel-container {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    order: 2;
+    
+    .carousel-track {
+      display: flex;
+      
+      .carousel-slide {
+        min-width: 33.33%;
+        padding: 0 1%;
+        
+        img {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+          border-radius: 8px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .work-content {
+    padding: 3% 4%;
+    
+    .tabs-container {
+      gap: 2%;
+      margin-bottom: 6%;
+      
+      .tab {
+        font-size: clamp(16px, 2vw, 20px);
+        padding: 10px 20px;
+      }
+    }
+    
+    .carousel-wrapper {
+      gap: 15px;
+      
+      .carousel-nav {
+        width: 35px;
+        height: 35px;
+        font-size: 20px;
+      }
+    }
+    
+    .carousel-container {
+      .carousel-track {
+        .carousel-slide {
+          min-width: 50%;
+          
+          img {
+            height: 200px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .work-content {
+    padding: 2% 3%;
+    
+    .tabs-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 3%;
+      margin-bottom: 8%;
+      
+      .tab {
+        font-size: clamp(14px, 1.8vw, 18px);
+        padding: 8px 16px;
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+      }
+    }
+    
+    .carousel-wrapper {
+      gap: 10px;
+      
+      .carousel-nav {
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+      }
+    }
+    
+    .carousel-container {
+      .carousel-track {
+        .carousel-slide {
+          min-width: 100%;
+          padding: 0;
+          
+          img {
+            height: 200px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .work-content {
+    padding: 2%;
+    
+    .carousel-container {
+      .carousel-track {
+        .carousel-slide {
+          img {
+            height: 200px;
+          }
+        }
+      }
+    }
+  }
 }

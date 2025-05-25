@@ -6,6 +6,8 @@ import Play from '../pages/Play';
 import Contact from '../pages/Contact';
 import Architerrax from '../components/Architerrax';
 import Scutoid from '../components/Scutoid';
+import Octaphilosophy from '../components/Octaphilosophy';
+import Adyamu from '../components/Adyamu';
 
 function AppRoutes() {
   return (
@@ -17,6 +19,8 @@ function AppRoutes() {
       <Route path="/contact" element={<Contact />} />
       <Route path="/play/architerrax" element={<Architerrax />} />
       <Route path="/play/scutoid" element={<Scutoid />} />
+      <Route path="/play/octaphilosophy" element={<Octaphilosophy />} />
+      <Route path="/play/adyamu" element={<Adyamu />} />
     </Routes>
   );
 }

@@ -38,11 +38,17 @@ function Play() {
           <img src={img5} className='img5' alt="" />
         </div>
         <div className='grid'>
-          <img src={img6} className='img6 select' alt="" />
+          <Link to={`/play/octaphilosophy`} className='img6 select'>
+            <img src={img6} className='maximum' alt="" />
+          </Link>
           <img src={img7} className='img7 select' alt="" />
           <video src={vid3} className='vid3' autoPlay muted loop playsInline />
-          <img src={img8} className='img8 select' alt="" />
-          <img src={img9} className='img9 select' alt="" />
+          <Link to={`/play/adyamu`} className='img8 select'>
+            <img src={img8} className='maximum' alt="" />
+          </Link>
+          <Link to={`/play/adyamu`} className='img9 select'>
+            <img src={img9} className='maximum' alt="" />
+          </Link>
           <img src={img10} className='img10' alt="" />
           <video src={vid4} className='vid4' autoPlay muted loop playsInline />
         </div>
