@@ -38,7 +38,7 @@ function Work() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => prevIndex + 1);
-    }, 2000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);
@@ -51,14 +51,14 @@ function Work() {
         setIsTransitioning(false);
         setCurrentImageIndex(currentImages.length);
         setTimeout(() => setIsTransitioning(true), 50);
-      }, 500);
+      }, 300);
     } else if (currentImageIndex === currentImages.length + 1) {
       // At fake first image, jump to real first image
       setTimeout(() => {
         setIsTransitioning(false);
         setCurrentImageIndex(1);
         setTimeout(() => setIsTransitioning(true), 50);
-      }, 500);
+      }, 300);
     }
   }, [currentImageIndex, currentImages.length]);
 
