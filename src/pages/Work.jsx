@@ -20,52 +20,24 @@ import arch7 from '@/assets/architecture-interior-design/7.png';
 function Work() {
   const [activeTab, setActiveTab] = useState('architecture');
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [isTransitioning, setIsTransitioning] = useState(true);
 
   const uiuxImages = [uiux1, uiux2, uiux3];
   const architectureImages = [arch1, arch2, arch3, arch4, arch5, arch6, arch7];
 
   const currentImages = activeTab === 'uiux' ? uiuxImages : architectureImages;
-  
-  // Create seamless loop: last image + all images + first image
-  const extendedImages = [
-    currentImages[currentImages.length - 1], // Last image at start
-    ...currentImages,                        // All original images
-    currentImages[0]                         // First image at end
-  ];
 
-  // Auto-advance carousel every 2 seconds
+  // Auto-advance carousel every 3 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => prevIndex + 1);
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % currentImages.length);
     }, 3000);
 
     return () => clearInterval(interval);
-  }, []);
-
-  // Handle seamless loop
-  useEffect(() => {
-    if (currentImageIndex === 0) {
-      // At fake last image, jump to real last image
-      setTimeout(() => {
-        setIsTransitioning(false);
-        setCurrentImageIndex(currentImages.length);
-        setTimeout(() => setIsTransitioning(true), 50);
-      }, 300);
-    } else if (currentImageIndex === currentImages.length + 1) {
-      // At fake first image, jump to real first image
-      setTimeout(() => {
-        setIsTransitioning(false);
-        setCurrentImageIndex(1);
-        setTimeout(() => setIsTransitioning(true), 50);
-      }, 300);
-    }
-  }, [currentImageIndex, currentImages.length]);
+  }, [currentImages.length]);
 
   // Reset carousel when switching tabs
   useEffect(() => {
-    setCurrentImageIndex(1); // Start at first real image
-    setIsTransitioning(true);
+    setCurrentImageIndex(0);
   }, [activeTab]);
 
   const handleTabChange = (tab) => {
@@ -73,12 +45,29 @@ function Work() {
   };
 
   const handlePrevious = () => {
-    setCurrentImageIndex((prevIndex) => prevIndex - 1);
+    setCurrentImageIndex((prevIndex) => 
+      prevIndex === 0 ? currentImages.length - 1 : prevIndex - 1
+    );
   };
 
   const handleNext = () => {
-    setCurrentImageIndex((prevIndex) => prevIndex + 1);
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % currentImages.length);
   };
+
+  // Calculate which images to show (current and next 2)
+  const getVisibleImages = () => {
+    const visible = [];
+    for (let i = 0; i < 3; i++) {
+      const imageIndex = (currentImageIndex + i) % currentImages.length;
+      visible.push({
+        image: currentImages[imageIndex],
+        index: imageIndex
+      });
+    }
+    return visible;
+  };
+
+  const visibleImages = getVisibleImages();
 
   return (
     <div className="background-container work-background">
@@ -105,16 +94,10 @@ function Work() {
           </button>
           
           <div className="carousel-container">
-            <div 
-              className="carousel-track" 
-              style={{
-                transform: `translateX(-${currentImageIndex * 33.33}%)`,
-                transition: isTransitioning ? 'transform 0.5s ease-in-out' : 'none'
-              }}
-            >
-              {extendedImages.map((image, index) => (
-                <div key={index} className="carousel-slide">
-                  <img src={image} alt={`${activeTab} project ${((index - 1 + currentImages.length) % currentImages.length) + 1}`} />
+            <div className="carousel-track">
+              {visibleImages.map((item, displayIndex) => (
+                <div key={`${currentImageIndex}-${displayIndex}`} className="carousel-slide">
+                  <img src={item.image} alt={`${activeTab} project ${item.index + 1}`} />
                 </div>
               ))}
             </div>
