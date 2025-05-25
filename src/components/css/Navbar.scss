@@ -9,6 +9,7 @@
     padding: 0 4%;
     width: 100%;
     box-sizing: border-box;
+    border-radius: 0 0 8px 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -17,6 +18,7 @@
     flex-wrap: wrap;
     gap: 4%;
     width: 100%;
+    justify-content: center;
     padding: 20px 0;
 }
 
@@ -52,6 +54,27 @@
 
 .pointer {
     cursor: url("data:image/svg+xml;utf8,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='6' fill='%23b92528' stroke='white' stroke-width='1.5'/%3E%3C/svg%3E"), auto;
+}
+
+/* Play route specific navbar styling */
+.play-route-nav {
+    background: linear-gradient(180deg, #e7ebee, #88888c) !important;
+    
+    a {
+        color: #333333 !important;
+    }
+    
+    .work-drop-container {
+        background: #e7ebee;
+        
+        .category h2 {
+            color: #333333;
+        }
+        
+        .category li {
+            color: #333333;
+        }
+    }
 }
 
 @media (max-width: 768px) {

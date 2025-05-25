@@ -1,113 +1,192 @@
+/* Play route specific background */
+.play-route-background {
+    background: #e4e3e0 !important;
+    color: #333333;
+}
+
 .architerrax-content {
-    height: 85vh;
-    padding: 0 4%;
-    gap: 2%;
-    overflow-y: auto;
-    overflow-x: hidden;
-    width: 100%;
+    min-height: 85vh;
+    padding: 4% 6%;
+    display: flex;
+    flex-direction: column;
+    gap: 4%;
     
-    .grid, .grid2 {
-        width: 100%;
+    .main-grid {
         display: flex;
         gap: 4%;
-        height: auto;
+        align-items: flex-start;
         margin-bottom: 4%;
         
-        .left-side, .right-side {
-            gap: 2%;
+        .mobile-mockups {
+            flex: 1;
             display: flex;
-            justify-content: space-evenly;
-            img {
-                width: 48%;
-                height: auto;
-                object-fit: cover;
+            gap: 3%;
+            justify-content: center;
+            
+            .phone-mockup {
+                flex: 1;
+                max-width: 300px;
+                
+                img {
+                    width: 100%;
+                    height: auto;
+                    border-radius: 20px;
+                    object-fit: cover;
+                }
             }
         }
         
-        .left-side {
-            width: 60%;
-        }
-        
-        .right-side {
-            width: 40%;
-            display: block;
-            .title {
-                padding-bottom: 2%;
+        .info-panel {
+            flex: 1.5;
+            max-width: 500px;
+            
+            .project-title {
+                font-size: 25px;
+                font-weight: bold;
+                color: #333333;
+                margin-bottom: 3%;
                 font-family: var(--font-primary);
-                font-size: clamp(20px, 2vw, 25px);
-                color: black;
-                opacity: 0.8;
+            }
+            
+            .info-card {
+                background: #25545a;
+                border-radius: 8px;
+                overflow: hidden;
+                width: 100%;
+                
+                .info-header {
+                    padding: 24px;
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    transition: background-color 0.3s ease;
+                    
+                    &:hover {
+                        background-color: rgba(255, 255, 255, 0.05);
+                        cursor: url("data:image/svg+xml;utf8,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='6' fill='%23b92528' stroke='white' stroke-width='1.5'/%3E%3C/svg%3E"), auto;
+                    }
+                    
+                    .info-details {
+                        flex: 1;
+                        
+                        .role {
+                            font-size: clamp(16px, 1.5vw, 20px);
+                            font-weight: 600;
+                            color: #ffffff;
+                            margin-bottom: 12px;
+                            font-family: var(--font-primary);
+                        }
+                        
+                        .year {
+                            font-size: clamp(14px, 1.2vw, 16px);
+                            color: #e0e0e0;
+                            margin-bottom: 8px;
+                            font-family: var(--font-primary);
+                        }
+                        
+                        .scope {
+                            font-size: clamp(14px, 1.2vw, 16px);
+                            color: #e0e0e0;
+                            font-family: var(--font-primary);
+                        }
+                    }
+                    
+                    .toggle-arrow {
+                        font-size: 24px;
+                        color: #ffffff;
+                        margin-left: 16px;
+                        transition: transform 0.3s ease;
+                        font-weight: bold;
+                        line-height: 1;
+                        user-select: none;
+                        min-width: 24px;
+                        text-align: center;
+                    }
+                }
+                
+                .info-content {
+                    padding: 0 24px 24px 24px;
+                    background-color: #e4e3e0;
+                    color: #333333;
+                    font-size: 14px;
+                    line-height: 1.6;
+                    font-family: var(--font-primary);
+                    border-top: 1px solid rgba(255, 255, 255, 0.1);
+                    border: 1px solid #25545a;
+                }
             }
         }
     }
-
-    .grid2 {
+    
+    .additional-images {
+        display: flex;
+        gap: 2%;
         justify-content: center;
         flex-wrap: wrap;
+        
         img {
-            width: 22%;
+            width: 23%;
+            min-width: 200px;
             height: auto;
-            margin: 1%;
             object-fit: cover;
+            border-radius: 8px;
         }
     }
 }
 
-.collapsible-section {
-    width: 100%;
-    border-radius: 5px;
-    margin-bottom: 2%;
-}
-
-.collapsible-title {
-    padding: 15px;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #25545a;
-    font-size: clamp(12px, 1.2vw, 14px);
-    font-family: var(--font-primary);
-}
-
-.collapsible-title:hover {
-    cursor: url("data:image/svg+xml;utf8,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='6' fill='%23b92528' stroke='white' stroke-width='1.5'/%3E%3C/svg%3E"), auto;
-}
-
-.collapsible-content {
-    padding: 15px;
-    border: 1px solid #25545a;
-    background-color: #e4e3e0;
-    color: black;
-    font-size: clamp(11px, 1.1vw, 13px);
-    font-family: var(--font-primary);
-}
-
-.collapsible-content {
-    display: none;
-}
-
-.collapsible-section .collapsible-content {
-    display: block;
+@media (max-width: 1024px) {
+    .architerrax-content {
+        padding: 3% 4%;
+        
+        .main-grid {
+            flex-direction: column;
+            gap: 4%;
+            
+            .mobile-mockups {
+                justify-content: center;
+                margin-bottom: 2%;
+                
+                .phone-mockup {
+                    max-width: 250px;
+                }
+            }
+            
+            .info-panel {
+                max-width: 100%;
+                flex: 1;
+            }
+        }
+        
+        .additional-images {
+            img {
+                width: 48%;
+                min-width: 150px;
+            }
+        }
+    }
 }
 
 @media (max-width: 768px) {
     .architerrax-content {
-        padding: 0 3%;
+        padding: 2% 3%;
         
-        .grid {
-            flex-direction: column;
-            
-            .left-side, .right-side {
-                width: 100%;
-                margin-bottom: 4%;
+        .main-grid {
+            .mobile-mockups {
+                flex-direction: column;
+                align-items: center;
+                
+                .phone-mockup {
+                    max-width: 200px;
+                    margin-bottom: 3%;
+                }
             }
         }
         
-        .grid2 {
+        .additional-images {
             img {
-                width: 48%;
-                margin: 1%;
+                width: 100%;
+                margin-bottom: 3%;
             }
         }
     }
@@ -115,22 +194,26 @@
 
 @media (max-width: 480px) {
     .architerrax-content {
-        padding: 0 2%;
+        padding: 2%;
         
-        .grid {
-            .left-side {
-                flex-direction: column;
-                img {
-                    width: 100%;
-                    margin-bottom: 2%;
-                }
-            }
+        .main-grid {
+            gap: 3%;
         }
         
-        .grid2 {
-            img {
-                width: 100%;
-                margin: 2% 0;
+        .info-panel {
+            .info-card {
+                .info-header {
+                    padding: 16px;
+                    
+                    .toggle-arrow {
+                        font-size: 20px;
+                        min-width: 20px;
+                    }
+                }
+                
+                .info-content {
+                    padding: 0 16px 16px 16px;
+                }
             }
         }
     }

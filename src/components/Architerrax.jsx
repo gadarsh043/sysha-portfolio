@@ -15,46 +15,51 @@ function Architerrax() {
 
   const handleToggle = () => {
     setIsOpen(!isOpen);
-
   };
+
   return (
-    <div className="background-container">
+    <div className="background-container play-route-background">
         <NavBar />
         <main className="architerrax-content">
-            <div className='grid'>
-                <div className='left-side'>
-                    <img src={img1} alt="" />
-                    <img src={img2} alt="" />
+            <div className='main-grid'>
+                <div className='mobile-mockups'>
+                    <div className="phone-mockup">
+                        <img src={img1} alt="ArchiterraX Instagram post 1" />
+                    </div>
+                    <div className="phone-mockup">
+                        <img src={img2} alt="ArchiterraX Instagram post 2" />
+                    </div>
                 </div>
-                <div className='right-side'>
-                    <div className="title">
+                <div className='info-panel'>
+                    <div className="project-title">
                         ArchiterraX
                     </div>
-                    <div className="collapsible-section">
-                        <div className="collapsible-title" onClick={handleToggle}>
-                            Fellow, ArchiterraX
-                            <br />
-                            <br />
-                            Year: 2021-22
-                            <br />
-                            <br />
-                            Scope: Research, Social Media, Workshops
-                            <span>{isOpen ? '▼' : '▲'}</span>
+                    <div className="info-card">
+                        <div className="info-header" onClick={handleToggle}>
+                            <div className="info-details">
+                                <div className="role">Fellow, ArchiterraX</div>
+                                <div className="year">Year: 2021-22</div>
+                                <div className="scope">Scope: Research, Social Media, Workshops</div>
+                            </div>
+                            <div className="toggle-arrow">
+                                {isOpen ? '▲' : '▼'}
+                            </div>
                         </div>
-                        {isOpen && <div className="collapsible-content">
-                            At ArchiterraX—a platform dedicated to fostering global collaboration among architecture students and professionals—I participated in a fellowship that emphasized knowledge exchange, interdisciplinary learning, and design dialogue. During my time there, I engaged in research on emerging topics in architecture, contributed to content creation for the organization’s social media platforms, and participated in Rhino software workshops to enhance my parametric design skills. I also built meaningful connections with a global network of like-minded architects.
-                            <br /><br />
-                            This experience deepened my understanding of collaborative design discourse while helping ArchiterraX grow its digital footprint and knowledge base. It was a mutually enriching exchange that bridged learning, creativity, and community engagement in the architectural field.
-                        </div>}
+                        {isOpen && (
+                            <div className="info-content">
+                                At ArchiterraX—a platform dedicated to fostering global collaboration among architecture students and professionals—I participated in a fellowship that emphasized knowledge exchange, interdisciplinary learning, and design dialogue. During my time there, I engaged in research on emerging topics in architecture, contributed to content creation for the organization&apos;s social media platforms, and participated in Rhino software workshops to enhance my parametric design skills. I also built meaningful connections with a global network of like-minded architects.
+                                <br /><br />
+                                This experience deepened my understanding of collaborative design discourse while helping ArchiterraX grow its digital footprint and knowledge base. It was a mutually enriching exchange that bridged learning, creativity, and community engagement in the architectural field.
+                            </div>
+                        )}
                     </div>
-
                 </div>
             </div>
-            <div className='grid2'>
-                <img src={img3} alt="" />
-                <img src={img4} alt="" />
-                <img src={img5} alt="" />
-                <img src={img6} alt="" />
+            <div className='additional-images'>
+                <img src={img3} alt="ArchiterraX work sample 1" />
+                <img src={img4} alt="ArchiterraX work sample 2" />
+                <img src={img5} alt="ArchiterraX work sample 3" />
+                <img src={img6} alt="ArchiterraX work sample 4" />
             </div>
         </main>
         <Footer />

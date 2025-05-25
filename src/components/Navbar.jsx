@@ -8,6 +8,9 @@ function NavBar() {
   const [isWorkMenuOpen, setIsWorkMenuOpen] = useState(false);
   const [closeTimeout, setCloseTimeout] = useState(null);
 
+  // Check if current route is a play sub-route (not the main /play route)
+  const isPlaySubRoute = location.pathname.startsWith('/play/') && location.pathname !== '/play';
+
   const handleMouseEnter = () => {
     if (closeTimeout) {
       clearTimeout(closeTimeout);
@@ -25,7 +28,7 @@ function NavBar() {
   };
 
   return (
-    <header className="top-nav">
+    <header className={`top-nav ${isPlaySubRoute ? 'play-route-nav' : ''}`}>
       <nav className="nav-links-left">
         <Link to="/about" className={`nav-about ${location.pathname === '/about' ? 'active' : ''}`}>About</Link>
         <Link to="/work" className={`nav-work ${location.pathname === '/work' ? 'active' : ''}`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>Work</Link>
@@ -63,7 +66,7 @@ function NavBar() {
         </Link>
       </div>
       <nav className="nav-links-right">
-        <Link to="/play" className={`nav-play ${location.pathname === '/play' ? 'active' : ''}`}>Play</Link>
+        <Link to="/play" className={`nav-play ${location.pathname === '/play' || location.pathname.startsWith('/play/') ? 'active' : ''}`}>Play</Link>
         <Link to="/contact" className={`nav-contact ${location.pathname === '/contact' ? 'active' : ''}`}>Contact</Link>
       </nav>
     </header>

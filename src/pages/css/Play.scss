@@ -1,10 +1,18 @@
+/* Play route specific background */
+.play-route-background {
+    background: #e4e3e0 !important;
+    color: #333333;
+}
+
 .page-content {
     height: 85vh;
 }
+
 .play-content {
     display: flex;
     padding: 0px 135px;
     gap: 10px;
+    
     .grid {
         width: 50%;
         height: 90%;
@@ -14,6 +22,7 @@
         gap: 2%;
         position: relative;
         overflow: hidden;
+        
         .img1, .img5 {
             height: 170px;
             width: 350px;
@@ -21,6 +30,7 @@
             filter: grayscale(100%);
             transition: filter 0.3s ease;
         }
+        
         .vid1, .vid2, .img2, .img3, .img4, .img7, .vid3, .img8, .img9, .vid4 {
             width: 170px;
             height: 170px;
@@ -28,6 +38,7 @@
             filter: grayscale(100%);
             transition: filter 0.3s ease;
         }
+        
         .img6, .img10 {
             height: 360px;
             width: 170px;
@@ -35,22 +46,26 @@
             filter: grayscale(100%);
             transition: filter 0.3s ease;
         }
+        
         .img10 {
             position: absolute;
             bottom: 5px;
             right: 0;
         }
+        
         .vid4 {
             position: absolute;
             top: 34.5%;
             left: 34%;
         }
     }
+    
     .select:hover {
         filter: grayscale(0%);
         cursor: url("data:image/svg+xml;utf8,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='6' fill='%23b92528' stroke='white' stroke-width='1.5'/%3E%3C/svg%3E"), auto;
     }
 }
+
 .maximum {
     width: 100%;
     height: 100%;
