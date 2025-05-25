@@ -146,7 +146,8 @@ function Contact() {
               backgroundImage: `url(${organicShape})`,
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'top center',
-              backgroundSize: '100%',
+              backgroundPositionY: '-5px',
+              backgroundSize: '85%',
             }}
           >
             <form onSubmit={handleSubmit}>

@@ -15,7 +15,7 @@
 
 .contact-info-section {
   flex-basis: 45%;
-  padding-top: 50px;
+  padding-top: 150px;
   padding-left: 8%;
 }
 
@@ -73,11 +73,13 @@
 
 .form-container {
   position: relative;
-  width: 90%;
+  width: 100%;
   max-width: 600px;
+  min-height: 500px;
   overflow: visible;
-  display: block;
-  padding: 4% 3%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   box-sizing: border-box;
 }
 
@@ -85,16 +87,20 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
   background-color: transparent;
-  padding-top: 25px;
+  padding: 60px 40px 40px 40px;
+  width: 85%;
+  max-width: 450px;
 }
 
 .form-container .form-group {
   display: flex;
   flex-direction: column;
   margin-bottom: 15px;
+  width: 100%;
 }
 
 .form-container .form-group input[type="text"],
@@ -104,7 +110,7 @@
 #message {
   width: 100%;
   margin-bottom: 10px;
-  padding: 15px;
+  padding: 15px 20px;
   border: none;
   border-radius: 25px;
   background-color: #4a4a4a;
@@ -115,19 +121,15 @@
   font-family: var(--font-primary);
 }
 
-#message{
+#message {
   height: 100px;
+  resize: none;
+  border-radius: 15px;
 }
 
 .form-container .form-group input::placeholder,
 .form-container .form-group textarea::placeholder {
   color: #a0a0a0;
-}
-
-.form-container .form-group textarea {
-  resize: none;
-  min-height: 5px;
-  border-radius: 15px;
 }
 
 .form-container .submit-btn {
@@ -145,6 +147,8 @@
   margin-top: 20px;
   padding: 15px 40px;
   transition: background-color 0.3s ease;
+  width: auto;
+  min-width: 120px;
 }
 
 .form-container .submit-btn:hover {
@@ -153,14 +157,14 @@
 
 /* New styles for error and success messages */
 .error-message {
-  color: #ff4d4d; /* Red for errors */
+  color: #ff4d4d;
   font-size: 0.9em;
   margin-top: 5px;
   margin-left: 10px;
 }
 
 .success-message {
-  color: #4CAF50; /* Green for success */
+  color: #4CAF50;
   font-size: 1em;
   margin-top: 15px;
   text-align: center;
@@ -190,7 +194,12 @@
 
   .form-container {
     width: 100%;
-    padding: 20px 4%;
+    min-height: 400px;
+  }
+
+  .form-container form {
+    padding: 40px 30px 30px 30px;
+    width: 90%;
   }
 }
 
@@ -204,6 +213,19 @@
   }
 
   .form-container {
-    padding: 15px 3%;
+    min-height: 350px;
+  }
+
+  .form-container form {
+    padding: 30px 20px 20px 20px;
+    width: 95%;
+  }
+
+  .form-container .form-group input[type="text"],
+  .form-container .form-group input[type="email"],
+  .form-container .form-group input[type="tel"],
+  .form-container .form-group textarea,
+  #message {
+    padding: 12px 16px;
   }
 }
