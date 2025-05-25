@@ -29,7 +29,9 @@ function Play() {
           <video src={vid1} className='vid1' autoPlay muted loop playsInline />
           <video src={vid2} className='vid2' autoPlay muted loop playsInline />
           <img src={img2} className='img2' alt="" />
-          <img src={img3} className='img3 select' alt="" />
+          <Link to={`/play/scutoid`} className='img3 select'>
+            <img src={img3} className='maximum' alt="" />
+          </Link>
           <Link to={`/play/architerrax`} className='img4 select'>
             <img src={img4} className='maximum' alt="" />
           </Link>

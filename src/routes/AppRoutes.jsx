@@ -5,6 +5,7 @@ import Work from '../pages/Work';
 import Play from '../pages/Play';
 import Contact from '../pages/Contact';
 import Architerrax from '../components/Architerrax';
+import Scutoid from '../components/Scutoid';
 
 function AppRoutes() {
   return (
@@ -15,6 +16,7 @@ function AppRoutes() {
       <Route path="/play" element={<Play />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/play/architerrax" element={<Architerrax />} />
+      <Route path="/play/scutoid" element={<Scutoid />} />
     </Routes>
   );
 }
